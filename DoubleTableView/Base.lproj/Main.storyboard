@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="trx-R2-ByA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="cAT-oC-A13">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rec-gU-wre" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="trx-R2-ByA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" misplaced="YES" id="xaN-TX-INL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Msz-6L-Oh6" kind="relationship" relationship="rootViewController" id="fE1-b4-1TC"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-837" y="37"/>
+        </scene>
+        <!--Double Table View Controller-->
+        <scene sceneID="jLH-dX-vvw">
+            <objects>
+                <viewController id="Msz-6L-Oh6" customClass="MGDoubleTableViewController" customModule="DoubleTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dAA-Ao-IDb"/>
+                        <viewControllerLayoutGuide type="bottom" id="jGY-gG-I4g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8lb-XD-siU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2vM-Xb-oXX">
+                                <rect key="frame" x="0.0" y="0.0" width="125" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QZB-7P-oSN">
+                                <rect key="frame" x="125" y="0.0" width="250" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jGY-gG-I4g" firstAttribute="top" secondItem="2vM-Xb-oXX" secondAttribute="bottom" id="6xV-fg-Tj1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QZB-7P-oSN" secondAttribute="trailing" constant="-16" id="9Uy-mD-mJ1"/>
+                            <constraint firstItem="2vM-Xb-oXX" firstAttribute="width" secondItem="8lb-XD-siU" secondAttribute="width" multiplier="1:3" id="GFx-4E-Wxc"/>
+                            <constraint firstItem="QZB-7P-oSN" firstAttribute="top" secondItem="2vM-Xb-oXX" secondAttribute="top" id="JzH-Si-hqY"/>
+                            <constraint firstItem="QZB-7P-oSN" firstAttribute="width" secondItem="8lb-XD-siU" secondAttribute="width" multiplier="2:3" id="VqT-EW-aVJ"/>
+                            <constraint firstItem="2vM-Xb-oXX" firstAttribute="top" secondItem="8lb-XD-siU" secondAttribute="top" id="gG8-PR-Mxz"/>
+                            <constraint firstItem="2vM-Xb-oXX" firstAttribute="leading" secondItem="8lb-XD-siU" secondAttribute="leading" id="ha1-Dl-ybS"/>
+                            <constraint firstItem="QZB-7P-oSN" firstAttribute="bottom" secondItem="2vM-Xb-oXX" secondAttribute="bottom" id="kqk-xB-bEr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3nu-hv-C9g"/>
+                    <connections>
+                        <outlet property="leftTableView" destination="2vM-Xb-oXX" id="oxS-ad-VBg"/>
+                        <outlet property="rightTableView" destination="QZB-7P-oSN" id="5se-xU-Dml"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ebo-zq-xX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95" y="-36"/>
+        </scene>
+    </scenes>
+</document>
